@@ -1,0 +1,1015 @@
+# 1. n (n>0) butun son berilgan. Dastlabki n ta musbat toq sonlarni saqlaydigan n o‘lchamli butun
+# sonli massiv tashkil etilsin.
+# 5 1 3 5 7 9
+# n=5
+# a=list(range(1,2*n,2))
+# print(a)
+# 2. n (n>0) butun son berilgan. 2 ning darajalarini saqlaydigan n o‘lchamli butun sonli massiv
+# tashkil etilsin.
+# 5 2
+# n=5
+
+# a=[2**i for i in range(1,n+1)]
+# print(a)
+# a=[]
+# for i in range(1,n+1):
+#     a.append(2**i)
+# print(type(a))
+# 3. Butun n (n>1) soni, arifmetik progressiyaning birinchi hadi a va uning ayirmasi d berilgan.
+# Shulardan foydalanib o‘zida arifmetik progressiyaning dastlabki n ta hadini saqlovchi massiv
+# tashkil etilsin.
+# 5 2 6 2 8 14 20 26
+# n=5
+# a=2
+# d=6
+# k=1
+# massiv=[a]
+# while n>k:
+#  k+=1
+#  a+=d
+#  massiv.append(a)
+#
+#  print(massiv,k)
+# 4. n (n>1) butun soni hamda birinchi hadi b va maxraji q bo‘lgan geometrik progressiya berilgan.
+# Shulardan foydalanib o‘zida geometrik progressiyaning dastlabki n ta hadini saqlovchi massiv
+# tashkil etilsin.
+# 3 2 6 2 12 72
+# n=3
+# b=2
+# q=6
+# k=1
+# massiv=[b]
+# while k<n:
+#     k+=1
+#     b*=q
+#     massiv.append(b)
+#     print(massiv)
+# 5. n (n>2) butun soni berilgan. f1=1, f2=1, fk=fk-2+f k-1, k=3,4,…
+# fk Fibonachchi sonlar ketma-ketligida birinchi n ta elementni o‘z ichiga oladigan n o‘lchamli
+# butun sonli massiv ifodalansin va chop etilsin.
+# 6 1 1 2 3 5 8
+# n=10
+# f1=1
+# f2=1
+# k=2
+# massiv=[f1,f2]
+# while n>k:
+#     fk=f1+f2
+#     f1,f2=f2,fk
+#     k+=1
+#     massiv.append(fk)
+# print(type(massiv))
+# # print(massiv)
+# f=[1,1]
+# n=5
+# for i in range(2,n):
+#     fn=f[i-1]+f[i-2]
+#     f.append(fn)
+# print(f)
+# 6. n (n>2), a va b butun sonlar berilgan. 1-elementi a ga, 2-elementi b, har bir keyingi elemeti
+# barcha avvalgi elementlar (o‘zidan oldingi barcha element) yig‘indisiga teng bo‘lgan n o‘lchamli
+# butun sonli massiv ifodalansin va chop etilsin.
+# 5 3 4 3 4 7 14 28
+# n=5
+# a=3
+# b=4
+# f=[a,b]
+# # for i in range(2,n):
+#     s=0
+#     for j in f:
+#         # print(j)
+#         s+=j
+#     f.append(s)
+# print(f)
+
+# for i in range(2,n):
+#     f.append(sum(f))
+# print(f)
+# 7. n o‘lchamli a massiv berilgan. Uning elementlari teskari tartibda chiqarilsin.
+# 3
+# 6 5 7 7 5 6
+# n=3
+# a=[6,5,7]
+# x=[]
+# a.reverse()
+# print(a)
+# 8. n o‘lchamli butun sonli massiv berilgan. Berilgan massivni indekslari bo‘yicha tartibida
+# tartiblab, massivdagi juft sonlar va ularning miqdori k chiqarilsin.
+# 5
+# 2 3 4 5 6
+# 6 4 2
+# 3
+# n=5
+# a=[2,3,4,5,6]
+# b=[]
+# sanoqchi=0
+# for i in a:
+#     if i%2==0:
+#         b.append(i)
+#         sanoqchi+=1
+# print(sanoqchi,b)
+# 9. n o‘lchamli, butun sonli massiv berilgan. Berilgan massivdagi barcha toq sonlarni o‘z ichiga
+# oladigan elementlarni o‘sish tartibida tartiblab, chop etilsin hamda ularning miqdori k aniqlansin.
+# 5
+# 3 2 12 7 6
+# 2 7
+# 2
+# a=[3,2,12,7,6]
+# b=[]
+# k=0
+# for i in a:
+#     if i%2==1:
+#         k+=1
+#         b.append(i)
+# print(b,k)
+# 10. n o‘lchamli butun sonli massiv berilgan. Massivdagi juft sonli elementlarining indekslarini
+# o‘sish tartibida, toq sonli elementlarining indekslarini kamayish tartibida tartiblab, massiv chop
+# etilsin.
+# 6
+# 7 4 7 3 5 10
+# 2 6
+# 5 4 3 1
+# a=[4,65,98,44,77,15,45,78,8]
+# juftindex=[]
+# toqindex=[]
+# for i in range(len(a)):
+#     if a[i]%2==0:
+#         juftindex.append(i)
+#     else:
+#         toqindex.append(i)
+# toqindex.reverse()
+# print(juftindex,toqindex)
+# 11. n o‘lchamli a massiv va k(1≤k≤n) butun soni berilgan. Massiv elementlari shart operatoridan
+# foydalanmasdan quyidagi tartibda chop etilsin:
+# ak,ak-1,ak-2, … a1.
+# 4 2
+# 1 2 3 4
+# 2 1
+
+# 11. n o‘lchamli a massiv va k(1≤k≤n) butun soni berilgan. Massiv elementlari shart operatoridan
+# foydalanmasdan quyidagi tartibda chop etilsin:
+# ak,ak-1,ak-2, … a1.
+# 4 2
+# 1 2 3 4
+# 2 1
+# a = [2,7,4,7,8,9,45,3,636,5467,7,4,3,423,42,6,346,4,64,56,4,56,3]
+# k = 8
+# j=a[:k+1]
+# a=j.reverse()
+# print(j)
+# 12. n o‘lchamli a massiv berilgan(n-juft son). (indekslari o‘sish tartibida) Juft indeksdagi
+# elementlari chiqarilsin. a2,a4,…,an. Shart operatoridan foydalanilmasin.
+# 6
+# 1 2 3 4 5 6
+# 2 4 6
+# a=[1,2,3,4,5,6]
+# n=6
+# b=[]
+# j=a[1:n+1:2]
+# print(j)
+# 13. n o‘lchamli a massiv berilgan(n-toq son). Massivning toq indeksida turgan elementlari
+# indekslarini kamayish tartibida tartiblab chiqarilsin. an, an-2, an-4, … a1 shart operatoridan
+# foydalanilmasin.
+# 5
+# 1 2 3 4 5
+# 5 3 1
+# n=5
+# a=[1,2,3,4,5]
+# j=a[0:n+1:2]
+# j.reverse()
+# print(j)
+# 14. n o‘lchamli a massiv berilgan. Avval massivning juft indeksli elementlari(indekslarini o‘sish
+# tartibida) keyin toq indeksli elementlari (indekslarini o‘sish tartibida) chiqarilsin: a2, a4, a6, … a1,
+# a3, a5… Shart operatoridan foydalanilmasin.
+# 6
+# 5 4 3 2 1 0
+# 4 2 0
+# 5 3 1
+# n=6
+# a=[5,4,3,2,1,0]
+# juft=a[1:n+1:2]
+# toq=a[0:n+1:2]
+# # juft.reverse()
+# # toq.reverse()
+# # print(juft,toq,sep=' ')
+# 15. n o‘lchamli a massiv berilgan. Avval toq indeksdagi elementlar, keyin juft indeksdagi
+# elementlar kamayish tartibida chop etilsin.
+# 6
+# 1 2 3 4 5 6
+# 5 3 1
+# 6 4 2
+# n=6
+# a=[1,2,3,4,5,6]
+# toq=a[0:n+1:2]
+# juft=a[1:n+1:2]
+# toq.reverse()
+# juft.reverse()
+# print(juft,toq,sep=' ')
+# 16. n o‘lchamli a massiv berilgan. Uning elementlari quyidagi tartibda chiqarilsin: a1, an, a2, an-1,
+# a3, an-2, ...
+# 6
+# 1 3 4 5 2 8 1 8 3 2 4 5
+# a=[1,2,3,4,5,6,7,8,9]
+# if len(a)%2==0:
+#     c=len(a)//2
+# else:
+#     c=len(a)//2+1
+# for i in range(c):
+#     if i==c-1:
+#         print(a[i],end=' ')
+#     else:
+#         print(a[i],a[-(i+1)],end=' ')
+# 17. n o‘lchamli a massiv berilgan. Uning elementlari quyidagi tartibda chiqarilsin: a1, a2, an, an-1,
+# a3, a4, an-2, an-3, ……(n-juft son).
+# 6
+# 1 3 4 5 2 8 1 3 8 2 4 5
+# a=[1,2,3,4,5,6,7,8,9,10,11]
+# if len(a)%4==0:
+#     c=len(a)//4
+# else:
+#     c=len(a)//4+1
+# for i in range(c):
+#     if i==c-1:
+#         for j in a:
+#            print(j,end=' ')
+#         break
+#     print(a[1],a[2],a[-1],a[-2],end=' ')
+#     a.pop(0)
+#     a.pop(0)
+#     a.pop()
+#     a.pop()
+#
+# 18. n o‘lchamli nol bo‘lmagan butun tipli a massiv berilgan. Uning ak<an tengsizlikni
+# qanoatlantiradigan birinchi ak elementining qiymati chiqarilsin.
+# 5
+# 6 8 3 2 4 3
+# a=[6,8,7,2,4,3]
+#
+# while a[0]>5:
+#       a.pop(0)
+# print(a[0])
+# 19. n o‘lchamli butun tipli a massiv berilgan. Uning a1<ak<an qo‘sh tengsizlikni
+# qanoatlantiradigan oxirgi ak elementining tartib nomeri chiqarilsin.
+# 5
+# 6 8 3 2 4 4
+# ----------------------------
+# n=5
+# k=0
+# a=[6,8,3,2,4]
+# while n>k:
+#     if a[0]<a[1] and a[1]<5:
+#        print(a[1])
+#        break
+#     k+=1
+#     # print(k,end=' ')
+#     a.pop(0)
+# a=[2,65,4,45,3,6,5]
+# z=None
+# for i in range(1,len(a)-1):
+#     if a[0]<a[i]<a[-1]:
+#         z=i
+# print(a[z],a[0],a[-1])
+# -----------------------------------4
+# 20. n o‘lchamli massiv hamda k va l butun sonlari berilgan(1≤k≤l≤n). k-indeksdan l-indeksgacha
+# bo‘lgan massiv elementlarining yig‘indisi topilsin.
+# 6 3 4
+# 7 9 3 1 5 8 4
+# n=6
+# k=3
+# l=4
+# a=[7,9,3,1,5,8]
+# sum=sum(a[1:4])
+# print(sum)
+# 21. n o‘lchamli massiv hamda k va l butun sonlari berilgan. (1≤k≤l≤n). k-indeksdan l-indeksgacha
+# bo‘lgan massiv elementlarining o‘rta arifmetigi topilsin.
+# 6 3 4
+# 7 9 3 1 5 8 2
+# a=[7,9,3,1,5,8]
+# k,l=3-1,4-1
+# x=abs(k-l)+1
+# sum=sum(a[k:l+1])/x
+# print(sum)
+# 22. n o‘lchamli massiv hamda k va l butun sonlari berilgan. (1<k≤l<n). k-indeksdan l-indeksgacha
+# bo‘lgan elementlardan boshqa barcha massiv elementlarining yig‘idisi topilsin.
+# 6 3 4
+# 7 9 3 1 5 8 29
+# n=6
+# k=3-1
+# l=4
+# a=[7,9,3,1,5,8]
+# # sum=0
+#
+# sum1=sum(a[:k])+sum(a[l:])
+# print(sum1)
+# 23. n o‘lchamli massiv hamda k va l butun sonlari berilgan. (1<k≤l<n). k-indeksdan l-indeksgacha
+# bo‘lgan elementlardan boshqa barcha massiv elementlarining o‘rta arifmetigi topilsin.
+# 6 3 4
+# 7 9 3 1 5 8 14.5
+# k=3-1
+# l=4-1
+# a=[7,9,3,1,5,8]
+# sum1=
+# 24. Bir xil sonlarni o‘z ichiga olmaydigan n o‘lchamli butun tipli massiv berilgan. Uning
+# elementlari arifmetik prog ssiyani tashkil etishi aniqlansin. Agar tashkil etsa progressiya
+# ayirmasi, tashkil etmasa 0(nol) chiqarilsin.
+# 6 3 8 13 18 23 28 5
+# n=6
+# a=[3,8,13,18,23,28]
+# x=(a[1]-a[0])
+# for i in range(1,len(a)):
+#     if x !=a[i]-a[i-1]:
+#
+#          x=0
+#          break
+# print(x)
+# 25. Nol bo‘lmagan butun sonli n o‘lchamli massiv berilgan. Uning elementlari geometrik
+# progresssiyani tashkil etishi tekshirilsin. Agar tashkil etsa progressiya maxraji aks holda 0(nol)
+# chiqarilsin.
+# 4
+# 16 8 4 2 0.5
+# a=[16,8,4,3]
+# x=a[1]/a[0]
+# for i in range(1,len(a)):
+#     if x!=a[i]/a[i-1]:
+#         x=0
+#         break
+# print(x)
+# 26. n o‘lchamli butun tipli massiv berilgan. Massivda juft va toq sonlarning(navbat bilan)
+# almashinib kelishi aniqlansin. Agar almashinib kelsa 0, aks holda qonuniyatni buzgan birinchi
+# element tartib nomeri chiqarilsin.
+# 5
+# 12 9 18 3 6 0
+#
+# `a=[8,5,17,3,6]
+# d=0
+# for i in range(1,len(a)):
+#     # if a[i-1]%2!=0 and a[i]%2!=1:
+#     if (a[i-1]+a[i])%2==0:
+#       d=a[i]
+#       break
+# print(d)`
+# a = [8, 5, 18, 3, 6]
+#
+# for i in range(1,len(a)//2+1):
+
+# 27. n o‘lchamli nol bo‘lmagan butun tipli massiv berilgan. Musbat va manfiy sonlarning
+# almashinib kelishi tekshirilsin. Agar almashinib kelsa 0 aks holda qonuniyatni buzgan birinchi
+# elementning tartib nomeri chiqarilsin.
+# 5
+# 7 -3 1 -9 3 0
+# a=[7,-3,1,-9,3,0]
+# d=0
+# for i in range(1,len(a)):
+#     if a[i-1]*a[i]>0:
+#         d=a[i]
+#         break
+# print(d)
+# 28. n o‘lchamli a massiv berilgan. Uning juft indeksli elementlarining ichidan eng kichigi topilsin.
+# 6
+# 1 6 5 3 4 5 3
+# a=[1,6,5,3,4,5]
+# b=[]
+# for i in range(1,len(a)+1):
+#     if i%2==0:
+#         b.append(a[i-1])
+# print(min(b),b)
+# 29. n o‘lchamli a massiv berilgan. Uning toq indeksli elementlarining ichidan eng kattasi topilsin.
+# 6
+# 1 6 5 3 4 5 5
+# a=[1,6,5,3,4,5]
+# b=[]
+# for i in range(1,len(a)+1):
+#     if i%2==1:
+#         b.append(a[i-1])
+# print(max(b))
+# 30. n o‘lchamli massiv berilgan. O‘zining o‘ng yonidagi elementdan katta massiv elementlari
+# indekslari va shunday elementlar soni chiqarilsin(topilgan indekslar o‘sish tartibida chiqarilsin).
+# 6
+# 1 6 5 3 4 5
+# 2 3
+# 2
+# a=[1,6,5,3,4,5]
+# sanoq=0
+# for i in range(1,len(a)):
+#     if a[i-1]>a[i]:
+#         sanoq+=1
+#         print(i)
+# print(sanoq)
+# 31. n o‘lchamli massiv berilgan. O‘zining chap yonidagi elementdan katta bo‘lgan massiv
+# elementlarining indekslari va shunday elementlar soni chiqarilsin( topilgan indekslar kamayish
+# tartibida chiqarilsin).
+# 6
+# 1 6 5 3 4 5
+# 6 5 2
+# 3
+# a=[1,6,5,3,4,5]
+# sanoq=0
+# for i in range(1,len(a)):
+#     if a[i-1]<a[i]:
+#         sanoq+=1
+#         print((i+1))
+# print(sanoq)
+# 32. n o‘lchamli massiv berilgan. Uning birinchi lokal minimumining indeksi topilsin. (lokal
+# minimum – o‘zining har ikki yonidagi elementdan kichik bo‘lgan element)
+# 6
+# 1 6 5 3 4 5 4
+# a=[1,6,5,3,4,5,6]
+# for i in range(1,len(a)-1):
+#     if a[i-1]>a[i] and a[i]<a[i+1]:
+#         print(i)
+# 33. n o‘lchamli massiv berilgan. Uning oxirgi lokal maksimumining indeksi topilsin. (lokal
+# maksimum – o‘zining har ikki yonidagi elementdan katta bo‘lgan element)
+# 6
+# 1 6 5 3 4 5 2
+# a=[1,6,5,3,4,5]
+# for i in range(1,len(a)-1):
+#     if a[i-1]<a[i] and a[i]>a[i+1]:
+#          print(i)
+# 34. n o‘lchamli massiv berilgan. Uning lokal minimumlari orasidan eng kattasi topilsin. (Agar
+# bunday element bo‘lmasa 0 chiqarilsin.)
+# 6
+# 6 1 3 2 4 3
+# 2
+# a=[6,1,3,2,4,3]
+# d=[]
+# b=[]
+# for i in range(1,len(a)-1):
+#     if a[i-1]>a[i] and a[i]<a[i+1]:
+#         d.append(a[i])
+# print(d)
+#
+# 35. n o‘lchamli massiv berilgan. Uning lokal maksimumlari orasidan eng kichigi topilsin. (Agar
+# bunday element bo‘lmasa 0 chiqarilsin.)
+# 6
+# 6 1 3 2 4 3 3
+# a=[6,1,3,2,4,3]
+# d=[]
+# for i in range(1,len(a)-1):
+#     if a[i-1]<a[i] and a[i]>a[i+1]:
+#         d.append(a[i])
+# print(min(d))
+# 36. n o‘lchamli massiv berilgan. Uning lokal maksimumini ham lokal minimumini ham tashkil
+# etmaydigan eng katta elementi topilsin.
+# 6
+# 6  3 2 4 3 6
+# 36. n o‘lchamli massiv berilgan. Uning lokal maksimumini ham lokal minimumini ham tashkil
+# etmaydigan eng katta elementi topilsin.
+# n = int(input("Masiiv uzunligini kiriting: "))
+# a = []
+# for i in range(n):
+#     a.append(int(input("Massiv elementini kiriting: ")))
+# max = a[0]
+# for i in range(1, n - 1, 1):
+#     if (a[i - 1] < a[i] and a[i] < a[i + 1]):
+#         continue
+#     if (a[i - 1] > a[i] and a[i] > a[i + 1]):
+#         continue
+#     if (max < a[i]):
+#         max = a[i]
+# if (max < a[-1]):
+#     max = a[-1]
+# print(max)
+#
+# 37. n o‘lchamli massiv berilgan. Uning monoton o‘suvchi bo‘laklari soni topilsin.
+a = [6, 1, 3, 2, 4, 3]
+# c=0
+# for i in range(1,len(a)-1):
+#     if a[i-1]<a[i] and a[i]>a[i+1]:
+#        c+=1
+# if a[-1]>a[-2]:
+#     c+=1
+# print(c)
+# 38. n o‘lchamli massiv berilgan. Uning monoton kamayuvchi bo‘laklari soni topilsin.
+# 6
+# 6 1 3 2 4 3 3
+# a=[6,1,3,2,4,3]
+# c=0
+# for i in range(1,len(a)-1):
+#     if a[i-1]>a[i] and a[i]<a[i+1]:
+#         c+=1
+# if a[-1]<a[-2]:
+#     c+=1
+# print(c)
+# 39. n o‘lchamli massiv berilgan. Uning monoton oraliqlar (ya’ni elementlar o‘suvchi yoki
+# kamayuvchi bo‘lgan bo‘laklar) soni topilsin.
+# 6
+# 6 1 3 2 4 3 5
+# a=[1,3,2,4,3,5]
+# c=0
+# for i in range(1,len(a)-1):
+#     if a[i-1]<a[i] and a[i]>a[i+1]:
+#         c+=1
+#     else:
+#         c+=1
+# if a[-1]>a[-2]:
+#     c+=1
+# else:
+#     c+=1
+# print(c)
+# 40.▲ r soni va n o‘lchamli a massiv berilgan. r soniga eng yaqin bo‘lgan massiv elementlari
+# topilsin.(shunday ak element bo‘lsa |ak-r| qiymat minimal bo‘ladi)
+# 3.1 6
+# 6 1 3 2 4 3 3
+# a = [2,65,4,45,8,3,6,5,32,12,4,43,12,11,8]
+# x = 10
+# m = abs(a[0]-x)
+# j = []
+# for i in range(len(a)):
+# 	z = abs(a[i]-x)
+# 	if m>=z:
+# 		m = z
+# print(m)
+# for i in a:
+# 	if abs(x-i)==m:
+# 		j.append(i)
+# print(j)
+# a = [2,65,4,45,8,3,6,5,32,12,4,43,12,11,8]
+# a=[6,1,3,4,3]
+# x=3.1
+# m=abs(a[0]-x)
+# j=[]
+# for i in range(len(a)):
+# 	z=abs(a[i]-x)
+# 	if m>=z:
+# 		m=z
+#
+# # print(m)
+# for i in a:
+# 	# print(i)
+# 	if abs(x-i)==m:
+# 		j.append(i)
+# 		# print(i)
+# print(j)
+# 41. n o‘lchamli massiv berilgan. Massivdagi yig‘indisi eng katta bo‘ladigan 2 ta yonma-yon
+# turuvchi elementlar topilib, bu elementlarning indekslari o‘sish tartibida chiqatirilsin. Bunday
+# yig‘indilar bir nechta bo‘lsa oxirgisi olinsin.
+# 6
+# 6 1 3 2 4 3 5 6
+# a=[6,1,3,5,4,3]
+# m=a[0]+a[1]
+# i1,i2=None,None
+# for i in range(len(a)-1):
+#     z=a[i]+a[i+1]
+#     # print(i)
+#     if m<=z:
+#         m=z
+#         i1=i
+#         i2=i+1
+# print(i1,i2,m)
+# 42. r soni va n o‘lchamli massiv berilgan. Yig‘indisi r soniga eng yaqin bo‘lgan 2 ta yonma-yon
+# massiv elementlari topilib, bu elementlarning indekslari o‘sish tartibida chiqatirilsin. Bunday
+# yig‘indilar bir nechta bo‘lsa oxirgisi olinsin.
+# 3.5 6
+# 5 1 2 1 3 7 4 5
+# a=[5,1,2,1,3,7]
+# r=3.5
+# m=abs((a[0]+a[1])-r)
+# i1,i2=None,None
+# for i in range(len(a)-1):
+#     z=abs((a[i]+a[i+1])-r)
+#     if  m>=z:
+#         m=z
+#         i1=i
+#         i2=i+1
+# print(i1,i2)
+
+#
+# def IsSquare(k):
+#     for i in range(1,k+1):
+#         if k/i==i:
+#              return 1
+# # print(IsSquare(5))
+# sanoq=0
+# for i in range(2,11):
+#     if IsSquare(i)==1:
+#        sanoq+=1
+# print(sanoq)
+# def IsSquare(k):
+#      p=False
+#      n=0
+#      while n<k:
+#          if n**2==k:
+#            p=True
+#          n+=1
+#      return p
+# print(IsSquare(15))
+# sanoq=0
+# for i in range(2,11):
+#
+#     if IsSquare(i):
+#         sanoq+=1
+# print(sanoq)
+# 10. Berilgan butun k (k>0) parametr, 5 ning biror darajasiga teng bo‘lsa true aks holda false
+# qiymatini qaytaruvchi mantiqiy tipli IsPowerS(k) funksiyasi tasvirlansin. Bu funksiyadan
+# foydalanib berilgan 10 ta butun sondan iborat nabordagi 5 ning darajalariga teng bo‘lgan
+# sonlarning miqdori topilsin.
+# 1 2 3 4 5 6 7 8 9 10
+# def IsPowerS(k):
+#     while k>=5:
+#         k/=5
+#         return k==5
+# print(IsPowerS(35))
+# 11. Berilgan butun k (k>0) parametr n (n>1) ning biror darajasiga teng bo‘lsa true aks holda false
+# qiymat qaytaruvchi mantiqiy tipli IsPowerN(k,n) funksiyasi tasvirlansin. Bu funksiyadan
+# foydalanib berilgan 10 ta butun sondan iborat nabordagi n ning darajalariga teng bo‘lgan
+# sonlarning miqdori topilsin.
+# 1 2 3 4 5 6 7 8 9 10
+# 3
+# 2
+# def IsPowerN(k,n):
+#     while k>n:
+#         k/=n
+#     return k==n
+# # print(IsPowerN(125,5))
+# sanoqchi=0
+# for i in range(2,11):
+#     if IsPowerN(i,3):
+#         sanoqchi+=1
+# print(sanoqchi)
+# 12. n (n>1) parametr tub son bo‘lsa true, aks holda false qiymat qaytaruvchi mantiqiy tipli
+# IsPrime(n) funksiya tasvirlansin. Har bir 1 dan katta bo‘lgan 10 ta sondan iborat sonlar nabori
+# berigan. Bu funksiyadan foydalanib berilgan nabordagi tub sonlar miqdori aniqlansin.
+# 1 2 3 4 5 6 7 8 9 10 4
+# def IsPrime(n):
+#     p=True
+#     for i in range(2,n//2+1):
+#         if n%i==0:
+#             p=False
+#         return p
+# print(IsPrime(18))
+# 13. Berilgan k butun musbat sondagi raqamlar miqdorini aniqlovchi butun tipli Digit Count(k)
+# funksiyasi tasvirlansin. Bu funksiyadan foydalanib berilgan 5 ta musbat butun sonning har biri
+# uchun raqamlari soni aniqlansin.
+# 12 1 36 121 5 2 1 2 3 1
+# def Digit_Count(k):
+#     s=0
+#     while k>0:
+#         s+=1
+#         k//=10
+#     return s
+# print(Digit_Count(1212))
+# 13. Berilgan k butun musbat sondagi raqamlar miqdorini aniqlovchi butun tipli Digit Count(k)
+# funksiyasi tasvirlansin. Bu funksiyadan foydalanib berilgan 5 ta musbat butun sonning har biri
+# uchun raqamlari soni aniqlansin.
+# 12 1 36 121 5 2 1 2 3 1
+# 14. k butun musbat sonining n-raqamini qaytaradigan (nomerlash o‘ngdan chapga qarab
+# bajarilgan) butun tipli DigitN(k,n) funksiyasi tasvirlansin. Agar n raqamlar sonidan katta bo‘lsa
+# funksiya -1 qaytarsin. Berilgan 5 ta butun musbat k1, k2,…k5 sonlari uchun (1, 5) oraliqda
+# o‘zgaruvchi n soniga mos raqamlar topilsin.
+# 121 34 6 190 50
+# 2
+# 2 3 -1 9 5
+# def DigitN(k,n):
+#     if n>Digit_Count(k):
+#         return -1
+#     a=0
+#     while n>0:
+#         x=k%10
+#         k//=10
+#         n-=1
+#     return x
+# print(DigitN(1212,2))
+# # 15. Butun k parametr palindrom bo‘lsa true aks holda false qiymat qaytaradigan mantiqiy tipli
+# # Ispalindron(K) funksiyasi tasvirlansin. (palendrom son – o‘ng va chapdan bir xil o‘qiladigan
+# # sondir). Funksiyani tasvirlashda Digit count va Digit N funksiyalaridan foydalanish mumkin. Bu
+# # funksiyadan foydalanib berilgan 5 ta butun musbat sondan iborat nabordagi palendrom sonlar
+# # miqdori aniqlansin
+
+# def Ispalindron(k):
+#     n=Digit_Count(k)
+#     i=1
+#     r=True
+#     while n>=i:
+#         r=r and DigitN(k,n)==DigitN(k,i)
+#         i+=1
+#         n-=1
+#     return r
+# print(Ispalindron(1212))
+# 43. n o‘lchamli butun tipli massiv berilgan, hamma elementlari(o‘sish yoki kamayish bo‘yicha)
+# tartiblangan. Faqat toq indeksdagi elementlari chop etilsin.
+# 6
+# 1 3 4 6 7 9 1 4 7
+# a=[1,3,4,6,7,9]
+# b=[]
+# for i in range(1,len(a)):
+#     if i%2==1:
+#         b.append(a[i-1])
+# print(b)
+# 44. Kamida ikkita bir xil elementga ega bo‘lgan n o‘lchamli butun tipli massiv berilgan. Bir xil
+# elementlarning indekslari aniqlanib, o‘sish tartibida chiqarilsin.
+# 6
+# 5 1 2 1 3 7 2 4
+# a=[5,1,2,1,3,7]
+# b=[]
+# for i in range(len(a)):
+#     for j in range(len(a)):
+#         # print(i,j)
+#         if a[i]==a[j] and i!=j:
+#             b.append(i)
+# print(b)
+# 45. n o‘lchamli massiv berilgan. Massivning ikkita eng yaqin elementlari indekslari topilib(ya’ni
+# elementlar ayirmasi moduli eng kichkina bo‘lgan) o‘sish tartibida chiqarilsin. Bunday yig‘indilar
+# bir nechta bo‘lsa oxirgisi olinsin.
+# 6
+# 5 1 2 1 3 7 2 4
+a = [5, 1, 2, 2, 3, 1]
+m = abs(a[0] - a[1])
+ai, aj = 0, 1
+for i in range(len(a)):
+    for j in range(i + 1, len(a)):
+        if m > abs(a[i] - a[j]):
+            m = abs(a[i] - a[j])
+            ai, aj = i, j
+mn = []
+for i in range(len(a)):
+    for i in range(i + 1, len(a)):
+        if m == abs(a[i] - a[j]):
+            mn.append((i, j))
+print(ai, aj)
+# 46. r soni va n o‘lchamli massiv berilgan. Yig‘idisi r ga eng yaqin bo‘lgan 2 ta element topilib,
+# indekslari berilgan tartibda chiqarilsin. Bunday yig‘indilar bir nechta bo‘lsa oxirgisi olinsin.
+# 3.5 6
+# 5 1 2 4 3 7 4 5
+r = 7
+a = [5, 1, 2, 4, 3, 7]
+m = abs(a[0] + a[1] - r)
+ai, aj = 0, 1
+for i in range(len(a) - 1):
+    z = abs(a[i] + a[i + 1] - r)
+    if m > z:
+        m = z
+        ai, aj = i, i + 1
+print(ai, aj)
+# 7. n o‘lchamli butun sonli massiv berilgan. Berilgan massivdagi har xil elementlar soni topilsin.
+#  6
+# 5 1 2 4 3 7 6
+# a=[5,1,2,4,4,7]
+# sanoqchi=0
+# for i in range(len(a)):
+#     for j in range(i+1,len(a)):
+#         if i!=j:
+#             print(i,j,sep=' ')
+#             sanoqchi+=1
+# print(sanoqchi)
+
+# print(len(set([5,1,2,4,6,7])))
+# 48. n o‘lchamli butun sonli massiv berilgan. Undagi eng ko‘p uchraydigan bir xil element miqdori
+# topilsin.
+# 6
+# # 3 1 2 2 2 1 3
+# a=[3,1,2,2,2,1,3]
+# b=list(set(a))
+# print(b)
+# c=[a.count(i)  for i in b]
+# # print(c,b[c.index(max(c))])
+# 49. n o‘lchamli butun sonli massiv berilgan. Agar u o‘rin almashtirishlardan iborat bo‘lsa ya`ni 1
+# dan to n gacha hamma sonlarni o‘z ichiga olsa 0 chiqarilsin aks holda 1-qonuniyatni buzadigan
+# element indeksi chiqarilsin.
+# 6
+# 5 2 1 4 3 6 0
+# a=[5,2,1,4,3,6,8]
+# b=list(range(1,len(a)+1))
+# if sorted(a)==b:
+#     print(0)
+# else:
+#     for i in range(len(a)):
+#         if not a[i] in b:
+#             print(i)
+#         else:
+#             d=list(set(b)-set(a))
+#             print(d)
+# # 50---------------------------------------
+# not_sortd=True
+# a=[2,1,3]
+# inv=0
+# while not_sortd:
+#     # print(a)
+#   for i in range(len(a)-1):
+#     print('->',a)
+#     if a[i]>a[i+1]:
+#         a[i],a[i+1]=a[i+1],a[i]
+#         # print(a[i],',',a[i+1],'=',a[i+1],',',a[i])
+#         inv+=1
+#   for i in range(len(a)-1):
+#       if a[i]>a[i+1]:
+#          not_sortd=True
+#          break
+#       else:
+#           not_sortd=False
+#       # print(not_sortd)
+# print(inv)
+# 51. Bir xil n o‘lchamli a va b massiv berilgan. a va b massivlardagi mos elementlarning qiymatlari
+# almashtirilsin. Avval a massivning o‘zgargan elementlari keyin b massivning o‘zgargan
+# elementlari chiqarilsin.
+# 5
+# 3 5 9 6 1
+# 2 5 7 4 9
+# 2 7 4 9
+# 3 9 6 1
+# a=[3,5,9,6,1]
+# b=[2,5,7,4,9]
+# x=[]
+# y=[]
+# n=5
+#
+# for i in range(n):
+#     if a[i]==b[i]:
+#         continue
+#     else:
+#         y.append(a[i])
+#         x.append(b[i])
+# print(x,y)
+# 52. n o‘lchamli a massiv berilgan. Xuddi shunday o‘lchamli elementlari quyidagi ko‘rinishda
+# aniqlanadigan yangi b massiv hosil qilinsin.
+# bk=2ak agar ak<5,
+# aks holda bk= 2
+# k
+# a
+# .
+# 5
+# 3 5 9 6 1 6 2.5 4.5 3 2
+# a=[3,5,9,6,1]
+# b=[]
+# for i in range(len(a)):
+#     if a[i]<5:
+#         k=a[i]*2
+#         b.append(k)
+#     else:
+#         k=a[i]/2
+#         b.append(k)
+# print(b)
+# 53. Bir xil n o‘lchamli 2 ta a va b massivlar berilgan. Shunday c massiv tuzilsin: c massivning iindeksdagi elementi a va b massivlarning i-indeksdagi elementlarining kattasidan iborat bo‘lsin.
+# 5
+# 3 5 9 6 1
+# 2 5 7 4 9
+# 3 5 9
+# a=[3,5,9,6,1]
+# b=[2,5,7,4,9]
+# c=[]
+# for i in range(len(a)):
+#     if a[i]>=b[i]:
+#         c.append(a[i])
+#     else:
+#         c.append(b[i])
+# print(c)
+# 54. n o‘lchamli butun sonli a massiv berilgan. Massivdagi barcha juft sonlar yangi butun tipli b
+# massivga yozilsin(shu tartibda) va hosil qilingan b massivning o‘lchami hamda uning elementlari
+# chiqarilsin.
+# 5
+# 8 5 9 6 1 2 8 6
+# a=[8,5,9,6,1]
+# b=[]
+# for i in range(len(a)):
+#     if  a[i]%2==0:
+#         b.append(a[i])
+# print(len(b),b)
+# 55. n(n≤15) o‘lchamli butun tipli a massiv berilgan. a massivning toq indeksdagi barcha
+# elementlarini yangi butun tipli b massivga yozib, hosil qilingan b massivning o‘lchami hamda
+# uning elementlari chiqarilsin. Shart operatoridan foydalanilmasin.
+# 5
+# 8 5 9 6 1
+# 3
+# 8 9 1
+# a=[8,5,9,6,1]
+# b=[]
+# for i in range(0,len(a),2):
+#    b.append(a[i])
+# print(b,len(b))
+# 56. n(n≤15) o‘lchamli butun tipli a massiv berilgan. Massivdagi indeksi 3 ga karrali bo‘lgan (3, 6,
+# …) elementlar yangi butun tipli b massivga yozilib, hosil qilingan b massivning o‘lchami va
+# elementlari chiqarilsin. Shart operatoridan foydalanilmasin.
+# 9
+# 1 3 7 4 5 8 6 9 2
+# 3
+# 7 8 2
+# a=[1,3,7,4,5,8,6,9,2]
+# b=[]
+# for i in range(2,len(a),3):
+#     b.append(a[i])
+# print(b,len(b))
+# 57. n o‘lchamli butun tipli a massiv berilgan. Shunday o‘lchamli yangi butun tipli b massivga a
+# massivning avval barcha juft indeksdagi elementlari keyin toq indeksdagi elementlari yozilsin.
+# a2,a4,…a1,a3,… Shart operatoridan foydalanilmasin.
+# 6
+# 2 4 8 7 3 9            4 7 9 2 8 3
+# a=[2,4,8,7,3,9]
+# b=[]
+# for i in range(1,len(a),2):
+#     b.append(a[i])
+# for i in range(0,len(a),2):
+#     b.append(a[i])
+# print(b)
+# 58. n o‘lchamli a massiv berilgan. Quyidagi tartib bo‘yicha shunday o‘lchamli yangi b massiv
+# ifodalansin. bk elementi a massivning 1-dan k gacha indeksli elementlar yig‘indisiga teng.(k ham
+# kiradi.)
+# 6
+# 2 4 8 7 3 9              2 6 14 21 24 33
+# a=[2,4,8,7,3,9]
+# b=[]
+# j=0
+# for i in range(len(a)):
+#     j+=a[i]
+#
+#
+#     b.append(j)
+# print(b)
+# 59. n o‘lchamli a massiv berilgan. Quyidagi qoida bo‘yicha shunday o‘lchamli yangi b massiv
+# tuzilsin: bk elementi a massivning 1-dan k-gacha indeksli elementlarining o‘rta arifmetigiga teng.
+# (k ham kiradi.)
+# 6
+# 2 4 6 8 10 12              2 3 4 5 6
+# a=[2,4,6,8,10,12]
+# k=0
+# j=0
+# b=[]
+# for i in range(len(a)):
+#     k+=1
+#     j+=a[i]
+#     print(j,k)
+#     b.append(j/k)
+# print(b)
+# 60. n o‘lchamli a massiv berilgan. Shunday o‘lchamli yangi b massiv quyidagi qoida bo‘yicha
+# ifodalansin: bk elementi a massivning k-dan n-gacha indeksli elementlari yig‘indisiga teng. ( n
+# ham kiradi.)
+# 6
+# 2 4 6 8 10 12              42 40 36 30 22 12
+# a=[2,4,6,8,10,12]
+# b=[]
+# j=0
+# k=0
+# for i in range(len(a)):
+#    k+=1
+#    h=sum(a)
+#    a.pop(0)
+#    b.append(h)
+# # print(b)
+# 61. n o‘lchamli a massiv berilgan. Shunday o‘lchamli yangi b massiv quyidagi tartib(qoida)
+# bo‘yicha ifodalansin: bk elementi a massivning k-dan n-gacha indeksli elementlari o‘rta
+# arifmetigiga teng. (n ham kiradi.)
+# 6
+# 2 4 6 8 10 12 7 8 9 10 11 12
+# a=[2,4,6,8,10,12]
+# b=[]
+# j=0
+# k=len(a)
+# for i in range(len(a)):
+#
+#     j=sum(a)
+#     a.pop(0)
+#     b.append(j/k)
+#     k-=1
+# print(b)
+# 62.▲ n o‘lchamli a massiv berilgan. 2 ta yangi b va c massivlarni ifodalang. b massivga a
+# massivning barcha musbat elementlari, c massivga manfiy elementlari (keyingi elementlarning
+# kirgizilgan tartibini saqlagan holda) yozilib, avval b massivning o‘lchami va tarkibi, keyin c
+# massivning o‘lchami va tarkibi chiqarilsin.
+# 5
+# -2 8 -4 3 7
+# 3
+# 8 3 7
+# 2
+# -2 -4
+# a=[-2,8,-4,3,7]
+# b=[]
+# c=[]
+# for i in range(len(a)):
+#     if a[i]>0:
+#         b.append(a[i])
+#     else:
+#         c.append(a[i])
+# print(len(b), b, len(c),c,sep=' ')
+# 63. n o‘lchamli elementlari o‘sish tartibida tartiblangan a va b massivlar berilgan. c massiv
+# quyidagicha tashkil etilsin: a va b dagi elementlar c ga o‘tkazilsin. c da hosil bo‘lgan
+# elementlarning o‘sish tartibida bo‘lishi ta`minlansin.
+# 5
+# 0 2 4 6 8
+# 1 3 5 7 9
+# 0 1 2 3 4 5 6 7 8 9
+# a=[0,2,4,6,8]
+# b=[1,3,5,7,9]
+# c=[]
+# for i in range(len(a)):
+#     c.append(a[i])
+#     c.append(b[i])
+# print(sorted(c))
+# 64. Elementlari kamayish bo‘yicha tartiblangan 3 ta butun tipli mos ravishda na, nb, nc o‘lchamli
+# a, b va c massivlar berilgan. Bu massivlarni natijaviy d (na+nb+nc o‘lchamli) massivga kamayish
+# bo‘yicha tartiblab birlashtirilsin.
+# 3
+# 3 2 1
+# 5 4 0
+# 9 8 6
+# 9 8 6 5 4 3 2 1 0
+# a=[3,2,1]
+# b=[5,4,0]
+# c=[9,8,6]
+# d=[]
+# for i in range(len(a)):
+#     d.append(a[i])
+#     d.append(b[i])
+#     d.append(c[i])
+# d.sort(reverse=True)
+# print(d)
+# 6
+# 6 1 3 2 4 3 2
+#
